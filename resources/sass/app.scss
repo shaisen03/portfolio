@@ -1,0 +1,66 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+
+
+.animation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    padding: 2rem 40px;
+   
+    .anm_mod {
+     opacity: 0;
+     transform: translate3d(0, 100%, 0);
+     transition: all 1s ease;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin: 10px;
+     width: 50%;
+     height: 40vh;
+     border-radius: 10px;
+     font-size: 2rem;
+     color: white;
+     text-shadow: 2px 2px 2px rgba(20, 20, 20, 0.5);
+     background: rgba(250, 250, 250, 0.5);
+     box-shadow: 0px 4px 8px rgba(250, 250, 250, 0.3);
+     &.full {
+      width: 100%;
+      font-size: 3rem;
+     }
+     &.left {
+      transform: translate3d(-100%, 0, 0);
+     }
+     &.right {
+      transform: translate3d(100%, 0, 0);
+     }
+     &.delay {
+      transition: all 2s ease;
+     }
+     &.fast {
+      transition: all 0.8 ease;
+     }
+    }
+   }
+   
+   .animation .anm_mod.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+   }
+   
+   .org_to_top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+   
+    }
+   
